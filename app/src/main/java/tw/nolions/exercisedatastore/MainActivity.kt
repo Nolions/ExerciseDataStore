@@ -46,7 +46,6 @@ class MainActivity : AppCompatActivity() {
     private fun observeData() {
         val flow: Flow<Int> = dataStore.data.map {
             it[EXAMPLE_COUNTER] ?: 0
-
         }
 
         flow.asLiveData().observe(this) {
